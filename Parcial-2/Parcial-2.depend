@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1637970584 source:c:\users\agust\desktop\parciallab2\parcial-2\input.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"input.h"
+	"LinkedList.h"
+	"parser.h"
+	"Controller.h"
+	"peliculas.h"
+
+1637808798 c:\users\agust\desktop\parciallab2\parcial-2\input.h
+
+1637808798 c:\users\agust\desktop\parciallab2\parcial-2\linkedlist.h
+
+1637965128 c:\users\agust\desktop\parciallab2\parcial-2\parser.h
+
+1637966880 source:c:\users\agust\desktop\parciallab2\parcial-2\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"input.h"
+	"LinkedList.h"
+	"parser.h"
+	"Controller.h"
+	"peliculas.h"
+
+1637968447 c:\users\agust\desktop\parciallab2\parcial-2\controller.h
+
+1637970653 source:c:\users\agust\desktop\parciallab2\parcial-2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"input.h"
+	"LinkedList.h"
+	"parser.h"
+	"Controller.h"
+	"peliculas.h"
+
+1637969742 source:c:\users\agust\desktop\parciallab2\parcial-2\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"input.h"
+	"LinkedList.h"
+	"parser.h"
+	"Controller.h"
+	"peliculas.h"
+
+1637969645 c:\users\agust\desktop\parciallab2\parcial-2\peliculas.h
+
+1637970813 source:c:\users\agust\desktop\parciallab2\parcial-2\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"input.h"
+	"LinkedList.h"
+	"parser.h"
+	"Controller.h"
+	"peliculas.h"
+
+1637970632 source:c:\users\agust\desktop\parciallab2\parcial-2\peliculas.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"input.h"
+	"LinkedList.h"
+	"parser.h"
+	"Controller.h"
+	"peliculas.h"
+
