@@ -4,8 +4,8 @@
 typedef struct
 {
     int id_peli;
-    char titulo[64];
-    char genero[64];
+    char titulo[300];
+    char genero[300];
     float rating;
 }eMovie;
 

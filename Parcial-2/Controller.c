@@ -47,7 +47,7 @@ int controller_ListMovie(LinkedList* pArrayListMovie)
     eMovie* auxMovie=NULL;
     if(pArrayListMovie!=NULL)
     {
-        printf(" ID             Titulo                            Genero                  Rating\n\n");
+        printf(" ID                  Titulo                        Genero              Rating\n\n");
         for(int i = 0 ; i<ll_len(pArrayListMovie); i++)
         {
             auxMovie=(eMovie* )ll_get(pArrayListMovie,i);
@@ -76,9 +76,9 @@ int controller_sortEmployee(LinkedList* pArrayListMovie)
     {
 
 
-        for(int i =0; i = ll_len(pArrayListMovie;i++)
+        for(int i =0; i = ll_len(pArrayListMovie);i++)
         {
-        system("cls");
+                system("cls");
 
                 controller_ListMovie(pArrayListMovie);
 
@@ -145,10 +145,11 @@ int controller_saveAsText(char* path, LinkedList* pArrayListMovie)
     return todoOk;
 }
 
-controller_setearRating(LinkedList* pArrayListMovie)
+int controller_setearRating(LinkedList* pArrayListMovie)
 {
     int todoOk=0;
     int random;
+    float random1;
     eMovie* auxMovie=NULL;
 
     if(pArrayListMovie!=NULL)
@@ -159,20 +160,20 @@ controller_setearRating(LinkedList* pArrayListMovie)
         {
             auxMovie=(eMovie*)ll_get(pArrayListMovie,i);
             random=rand() % (4-1+1)+1;
-
+            random1=(float)(rand() % (10-1+1)+1/10);
             switch(random)
             {
             case 1:
-                movie_setGenero(auxMovie,"Drama");
+                movie_setRating(auxMovie,random1);
                 break;
             case 2:
-                movie_setGenero(auxMovie,"Comedia");
+                movie_setRating(auxMovie,random1);
                 break;
             case 3:
-                movie_setGenero(auxMovie,"Comedia");
+                movie_setRating(auxMovie,random1);
                 break;
             case 4:
-                movie_setGenero(auxMovie,"Comedia");
+                movie_setRating(auxMovie,random1);
                 break;
             }
 

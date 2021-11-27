@@ -54,7 +54,7 @@ int movie_setTitulo(eMovie* this,char* titulo)
 {
     int todoOk=0;
 
-    if(this != NULL && titulo!=NULL && strlen(titulo)<20)
+    if(this != NULL && titulo!=NULL)
     {
         strcpy(this->titulo,titulo);
         todoOk =1;

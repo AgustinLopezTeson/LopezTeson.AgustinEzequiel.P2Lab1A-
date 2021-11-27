@@ -18,7 +18,7 @@ int parser_MoviesFromText(FILE* pFile , LinkedList* pArrayListMovie)
 {
     int todoOk=1;
     int cant;
-    char buffer[4][150];
+    char buffer[4][300];
     eMovie * aux=NULL;
 
             fscanf(pFile,"%[^,],%[^,],%[^,],%s\n",buffer[0],buffer[1],buffer[2],buffer[3]);
