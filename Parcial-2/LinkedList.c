@@ -5,7 +5,7 @@
 #include "LinkedList.h"
 #include "parser.h"
 #include "Controller.h"
-#include "peliculas.h"
+#include "post.h"
 
 static Node* getNode(LinkedList* this, int nodeIndex);
 static int addNode(LinkedList* this, int nodeIndex,void* pElement);
@@ -589,5 +589,33 @@ LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void*))
     }
 
     return filterList;
+}
+
+LinkedList * ll_map(LinkedList* this, void* (*pFunc) (void* element))
+{
+    LinkedList* newList = NULL;
+    int len;
+    void* element = NULL;
+
+		if(this!=NULL && pFunc != NULL)
+		{
+			newList = ll_newLinkedList();
+			if(newList != NULL)
+            {
+                len = ll_len(this);
+                for(int i=0; i<len; i++)
+                {
+                    element = ll_get(this, i);
+                    pFunc(element);
+                    if(element != NULL)
+                    {
+                        ll_add(newList,element);
+                    }
+
+                }
+
+            }
+		}
+		return newList;
 }
 

@@ -1,2 +1,2 @@
-int parser_MoviesFromText(FILE* pFile , LinkedList* pArrayListMovies);
+int parser_postFromText(FILE* pFile , LinkedList* pArrayListPost);
 

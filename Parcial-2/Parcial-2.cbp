@@ -50,10 +50,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="parser.h" />
-		<Unit filename="peliculas.c">
+		<Unit filename="post.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="peliculas.h" />
+		<Unit filename="post.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

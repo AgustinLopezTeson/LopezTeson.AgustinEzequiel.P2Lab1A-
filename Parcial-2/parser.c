@@ -5,35 +5,36 @@
 #include "LinkedList.h"
 #include "parser.h"
 #include "Controller.h"
-#include "peliculas.h"
+#include "post.h"
 
 /** \brief Parsea los datos los  (modo texto).
  *
  * \param path char*
- * \param pArrayListMovie LinkedList*
+ * \param pArrayListPost LinkedList*
  * \return int
  *
  */
-int parser_MoviesFromText(FILE* pFile , LinkedList* pArrayListMovie)
+int parser_postFromText(FILE* pFile , LinkedList* pArrayListPost)
 {
     int todoOk=1;
     int cant;
-    char buffer[4][300];
-    eMovie * aux=NULL;
+    char buffer[5][300];
+    ePost* auxPost=NULL;
 
-            fscanf(pFile,"%[^,],%[^,],%[^,],%s\n",buffer[0],buffer[1],buffer[2],buffer[3]);
+            fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%s\n",buffer[0],buffer[1],buffer[2],buffer[3],buffer[4]);
 
             while(!feof(pFile)){
-                    aux=new_movie();
-                    if(aux!=NULL)
+                    auxPost=new_post();
+                    if(auxPost!=NULL)
                     {
-                        cant = fscanf(pFile,"%[^,],%[^,],%[^,],%s\n",buffer[0],buffer[1],buffer[2],buffer[3]);
-                        movie_setId(aux,atoi(buffer[0]));
-                        movie_setTitulo(aux,buffer[1]);
-                        movie_setGenero(aux,buffer[2]);
-                        movie_setRating(aux,atof(buffer[3]));
+                        cant = fscanf(pFile,"%[^,],%[^,],%[^,],%[^,],%s\n",buffer[0],buffer[1],buffer[2],buffer[3],buffer[4]);
+                        post_setId(auxPost,atoi(buffer[0]));
+                        post_setUser(auxPost,buffer[1]);
+                        post_setLikes(auxPost,atoi(buffer[2]));
+                        post_setDislikes(auxPost,atoi(buffer[3]));
+                        post_setFollowers(auxPost,atoi(buffer[4]));
 
-                        ll_add(pArrayListMovie,aux);
+                        ll_add(pArrayListPost,auxPost);
 
                         todoOk=0;
                     }

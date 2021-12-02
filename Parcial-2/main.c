@@ -5,12 +5,13 @@
 #include "LinkedList.h"
 #include "parser.h"
 #include "Controller.h"
-#include "peliculas.h"
+#include "post.h"
 int main()
 {
     srand(time(NULL));
     char seguir = 's';
-    LinkedList* listaPeliculas = ll_newLinkedList();
+    LinkedList* listaPost = ll_newLinkedList();
+    char cadenaArchivo[20];
 
     do
     {
@@ -18,40 +19,53 @@ int main()
             switch (menu())
             {
             case 1:
-                if ( !controller_loadFromText("movies.csv", listaPeliculas) )
+                printf("Nombre del Archivo a cargar (posts)\n");
+                fflush(stdin);
+                gets(cadenaArchivo);
+                strcat(cadenaArchivo, ".csv");
+                if ( !controller_loadFromText(cadenaArchivo, listaPost) )
                 {
                     printf("Error al cargar desde texto\n");
                 }
                 system("cls");
                 break;
             case 2:
-                 if ( !controller_ListMovie(listaPeliculas) )
+                 if ( !controller_ListPost(listaPost) )
                 {
-                    printf("Error al listar las peliculas\n");
+                    printf("Error al listar post\n");
                 }
                 system("pause");
-            break;
+                break;
             case 3:
-                if ( !controller_setearRating(listaPeliculas) )
+                 if ( !controller_map(listaPost) )
                 {
-                    printf("Error en setear Rating\n");
+                    printf("Error al listar post\n");
                 }
+                    system("pause");
                 break;
             case 4:
+
+                if ( !controller_filterLikes(listaPost))
+                {
+                    printf("Error al listar post\n");
+                }
+                    system("pause");
                 break;
             case 5:
+                 if ( !controller_filterhate(listaPost))
+                {
+                    printf("Error al listar post\n");
+                }
+                    system("pause");
                break;
             case 6:
+                controller_ordenarPost(listaPost);
                 break;
             case 7:
-                if ( !controller_saveAsText("movies1.csv", listaPeliculas) )
-                {
-                    printf("Error al guardar en modo texto\n");
-                }
                 break;
             case 8:
                seguir='n';
-
+                break;
             default:
                 printf("Opcion invalida\n");
             }
