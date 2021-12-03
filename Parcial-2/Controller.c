@@ -157,17 +157,19 @@ int controller_filterLikes(LinkedList* pArrayListPost)
 {
     int todoOk = 0;
     char auxCadenaPath[20];
+    LinkedList* aux = ll_newLinkedList();
     if (pArrayListPost != NULL)
     {
         printf("Buscando\n");
-        pArrayListPost = ll_filter(pArrayListPost,filtrar_likes);
+
+        aux = ll_filter(pArrayListPost,filtrar_likes);
         strcpy(auxCadenaPath, "postMasLikes.csv");
 
-        if(pArrayListPost != NULL)
+        if(aux != NULL)
         {
-            controller_ListPost(pArrayListPost);
+            controller_ListPost(aux);
             system("pause");
-            controller_saveAsText(auxCadenaPath, pArrayListPost);
+            controller_saveAsText(auxCadenaPath, aux);
             todoOk = 1;
         }
 
@@ -213,11 +215,11 @@ int controller_saveAsText(char* path, LinkedList* pArrayListPost)
     int todoOk = 0;
     FILE* f;
     int id;
-    char user[50];
+    char user[100];
     int likes;
     int dislikes;
     int followers;
-    ePost* auxPost;
+    ePost* auxPost=NULL;
 
     if ( path != NULL && pArrayListPost != NULL )
     {
@@ -235,7 +237,7 @@ int controller_saveAsText(char* path, LinkedList* pArrayListPost)
         {
             auxPost = ll_get(pArrayListPost, i);
             if (    post_getId( auxPost, &id ) &&
-                    post_getUser( auxPost, user ) &&
+                    post_getUser( auxPost, &user ) &&
                     post_getLikes( auxPost, &likes) &&
                     post_getDislikes(auxPost, &dislikes)&&
                     post_getFollowers(auxPost,&followers)

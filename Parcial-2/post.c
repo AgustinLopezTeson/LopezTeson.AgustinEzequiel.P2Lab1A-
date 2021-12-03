@@ -136,10 +136,11 @@ int filtrar_likes(void* post)
     ePost* auxPost = NULL;
     if (post != NULL)
     {
-            auxPost=(ePost*) post;
+        auxPost = (ePost*) post;
 
         if (auxPost->likes > 3500)
         {
+            printf("%d\n\n", auxPost->likes);
             todoOk = 1;
         }
     }
@@ -152,8 +153,7 @@ int filtrar_hate(void* post)
     ePost* auxPost = NULL;
     if (post != NULL)
     {
-
-            auxPost=(ePost*) post;
+        auxPost=(ePost*) post;
         if(auxPost->likes < auxPost->dislikes)
         {
             todoOk = 1;

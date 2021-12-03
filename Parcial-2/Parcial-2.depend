@@ -90,7 +90,7 @@
 
 1637972193 c:\users\agust\desktop\parciallab2\lopezteson.agustinezequiel.p2lab1a-\parcial-2\peliculas.h
 
-1638485652 source:c:\users\agust\desktop\parciallab2\lopezteson.agustinezequiel.p2lab1a-\parcial-2\linkedlist.c
+1638491809 source:c:\users\agust\desktop\parciallab2\lopezteson.agustinezequiel.p2lab1a-\parcial-2\linkedlist.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -131,7 +131,7 @@
 	"Controller.h"
 	"peliculas.h"
 
-1638487769 source:c:\users\agust\desktop\parciallab2\lopezteson.agustinezequiel.p2lab1a-\parcial-2\controller.c
+1638491450 source:c:\users\agust\desktop\parciallab2\lopezteson.agustinezequiel.p2lab1a-\parcial-2\controller.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -143,7 +143,7 @@
 
 1638487736 c:\users\agust\desktop\parciallab2\lopezteson.agustinezequiel.p2lab1a-\parcial-2\post.h
 
-1638488736 source:c:\users\agust\desktop\parciallab2\lopezteson.agustinezequiel.p2lab1a-\parcial-2\post.c
+1638490108 source:c:\users\agust\desktop\parciallab2\lopezteson.agustinezequiel.p2lab1a-\parcial-2\post.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>

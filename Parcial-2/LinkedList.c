@@ -566,7 +566,7 @@ LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void*))
     if(this!=NULL && pFunc != NULL)
     {
 
-        filterList= ll_newLinkedList();
+        filterList = ll_newLinkedList();
 
 
         if(filterList!=NULL)
@@ -577,9 +577,9 @@ LinkedList* ll_filter(LinkedList* this, int (*pFunc)(void*))
 
             elemento=ll_get(this,i);
 
-                if(pFunc(elemento)){
+                if(pFunc(elemento)==1){
 
-                    ll_add(this,elemento);
+                    ll_add(filterList,elemento);
 
                 }
 
